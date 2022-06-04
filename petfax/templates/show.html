@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pet.pet_name }}</title>
+    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1> {{ pet.pet_name }} </h1>
+        <p>{{pet.pet_fact}}</p>
+        <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}" class="img-height"/>
+        <br/>
+        <a href="/pets"><button class="btn btn-primary mt-2">home</button></a>
+        <hr/>
+    </div>
+
+</body>
+</html>
